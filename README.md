@@ -1,16 +1,21 @@
-# BalansMedNew
+# Balans Med
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.11.
+Strona internetowa dla centrum rehabilitacji i fizjoterapii Balans Med. Ten projekt został stworzony przy użyciu frameworka Angular w wersji 19.2.11.
 
-## Development server
+## Opis projektu
 
-To start a local development server, run:
+Balans Med to strona internetowa centrum rehabilitacji i fizjoterapii, która prezentuje ofertę usług, cennik, informacje o lekarzach oraz umożliwia kontakt z placówką.
+
+## Uruchamianie lokalnie
+
+Aby uruchomić projekt lokalnie, wykonaj następujące kroki:
 
 ```bash
+npm install
 ng serve
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+Aplikacja będzie dostępna pod adresem `http://localhost:4200/`. Zmiany w kodzie automatycznie odświeżą stronę.
 
 ## Code scaffolding
 
