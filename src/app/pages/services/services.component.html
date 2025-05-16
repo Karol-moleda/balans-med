@@ -1,0 +1,85 @@
+<div class="services-container">
+  <div class="services-header">
+    <h1>Nasze Usługi</h1>
+    <p class="subtitle">Zapewniamy kompleksową opiekę medyczną najwyższej jakości</p>
+  </div>
+
+  <div class="services-categories">
+    <button
+      class="category-btn active"
+      (click)="filterServices('all')"
+      (keydown.enter)="filterServices('all')">
+      Wszystkie
+    </button>
+    <button
+      class="category-btn"
+      (click)="filterServices('konsultacje')"
+      (keydown.enter)="filterServices('konsultacje')">
+      Konsultacje
+    </button>
+    <button
+      class="category-btn"
+      (click)="filterServices('badania')"
+      (keydown.enter)="filterServices('badania')">
+      Badania
+    </button>
+    <button
+      class="category-btn"
+      (click)="filterServices('zabiegi')"
+      (keydown.enter)="filterServices('zabiegi')">
+      Zabiegi
+    </button>
+  </div>
+
+  <div class="selected-category-info" *ngIf="selectedCategory !== 'all'">
+    <div class="info-badge">
+      Wybrana kategoria: <strong>{{ getCategoryDisplayName(selectedCategory) }}</strong>
+    </div>
+    <p class="info-description">{{ getCategoryDescription(selectedCategory) }}</p>
+  </div>
+
+  <div class="services-grid">
+    <div
+      class="service-card"
+      *ngFor="let service of displayedServices"
+      [ngClass]="{ highlighted: service.featured }">
+      <div class="service-icon">
+        <i [class]="service.icon"></i>
+      </div>
+      <h3>{{ service.name }}</h3>
+      <p>{{ service.description }}</p>
+
+      <div class="service-details" *ngIf="service.details">
+        <h4>Szczegóły usługi:</h4>
+        <ul>
+          <li *ngFor="let detail of service.details">{{ detail }}</li>
+        </ul>
+      </div>
+
+      <div class="service-timeinfo" *ngIf="service.time">
+        <span class="time-badge">Czas trwania: {{ service.time }}</span>
+      </div>
+
+      <div class="service-footer">
+        <span class="price">{{ service.price }} zł</span>
+        <button class="book-btn" (click)="showServiceDetails(service)">Umów wizytę</button>
+      </div>
+
+      <div class="service-popularity" *ngIf="service.popularity">
+        <div class="popularity-meter" [style.width.%]="service.popularity"></div>
+        <span class="popularity-label">Popularność: {{ service.popularity }}%</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="no-services-message" *ngIf="displayedServices.length === 0">
+    <i class="fas fa-info-circle"></i>
+    <p>Nie znaleziono usług w wybranej kategorii. Prosimy wybrać inną kategorię.</p>
+  </div>
+
+  <div class="services-contact">
+    <h2>Potrzebujesz więcej informacji?</h2>
+    <p>Nasz zespół jest gotowy odpowiedzieć na wszystkie Twoje pytania</p>
+    <button class="contact-btn">Skontaktuj się z nami</button>
+  </div>
+</div>

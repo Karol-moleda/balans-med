@@ -1,0 +1,44 @@
+$habr-blue-primary: #5B87C5;
+$habr-blue-dark: #3A6BAD;
+$habr-blue-light: #7DA0D7;
+$habr-blue-pale: #E8F0FD;
+$white: #FFFFFF;
+$light-gray: #F5F5F5;
+$text-dark: #333333;
+$text-light: #FFFFFF;
+$border-color: #DEEAFE;
+$primary-color: $habr-blue-primary;
+$accent-color: $habr-blue-dark;
+$text-color: $text-dark;
+$box-shadow: 0 4px 6px rgba(91, 135, 197, 0.1);
+$section-padding: 5rem 2rem;
+
+
+$mobile: 576px;
+$tablet: 768px;
+$desktop: 992px;
+$large-desktop: 1200px;
+
+@mixin mobile {
+  @media (max-width: #{$mobile}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (max-width: #{$tablet}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (max-width: #{$desktop}) {
+    @content;
+  }
+}
+
+@mixin large-desktop {
+  @media (max-width: #{$large-desktop}) {
+    @content;
+  }
+}

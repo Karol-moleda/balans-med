@@ -4,17 +4,21 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
+    "start:no-ssr": "ng serve --configuration development --no-ssr",
     "build": "ng build",
+    "build:no-ssr": "ng build --configuration development --no-ssr",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "serve:ssr:balans-med-new": "node dist/balans-med-new/server/server.mjs"
   },
   "private": true,
   "dependencies": {
+    "@angular/cdk": "^19.2.16",
     "@angular/common": "^19.2.0",
     "@angular/compiler": "^19.2.0",
     "@angular/core": "^19.2.0",
     "@angular/forms": "^19.2.0",
+    "@angular/material": "^19.2.16",
     "@angular/platform-browser": "^19.2.0",
     "@angular/platform-browser-dynamic": "^19.2.0",
     "@angular/platform-server": "^19.2.0",

@@ -1,0 +1,20 @@
+<section class="doctors-section">
+  <div class="container">
+    <h2 class="section-title">Nasz zespół lekarzy</h2>
+    <p class="section-subtitle">Poznaj naszych doświadczonych specjalistów</p>
+    
+    <div class="doctors-grid">
+      <div class="doctor-card" *ngFor="let doctor of doctors">
+        <div class="doctor-image">
+          <img [src]="doctor.image" [alt]="doctor.name">
+        </div>
+        <div class="doctor-info">
+          <h3 class="doctor-name">{{doctor.name}}</h3>
+          <p class="doctor-specialty">{{doctor.specialty}}</p>
+          <p class="doctor-description">{{doctor.description}}</p>
+          <button class="appointment-button">Umów wizytę</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

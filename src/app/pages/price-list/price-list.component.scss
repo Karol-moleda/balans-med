@@ -1,0 +1,150 @@
+$primary-color: #4a90e2;
+$secondary-color: #2c3e50;
+$accent-color: #16a085;
+$light-gray: #f8f9fa;
+$text-dark: #333;
+$text-light: #777;
+
+.price-list-container {
+  padding: 80px 0;
+  background-color: white;
+  font-family: 'Arial', sans-serif;
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  .main-title {
+    text-align: center;
+    color: $secondary-color;
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    font-weight: 600;
+  }
+
+  .subtitle {
+    text-align: center;
+    color: $text-light;
+    font-size: 1.2rem;
+    margin-bottom: 50px;
+  }
+
+  .price-categories {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin-bottom: 50px;
+  }
+
+  .price-category {
+    background-color: $light-gray;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  }
+
+  .category-title {
+    padding: 20px;
+    background-color: $primary-color;
+    color: white;
+    font-size: 1.5rem;
+    margin: 0;
+  }
+
+  .price-items {
+    padding: 0;
+  }
+
+  .price-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 1px solid #eee;
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    &:hover {
+      background-color: rgba(74, 144, 226, 0.05);
+    }
+  }
+
+  .service-details {
+    flex: 1;
+  }
+
+  .service-name {
+    color: $text-dark;
+    font-size: 1.1rem;
+    margin: 0 0 5px;
+    font-weight: 500;
+  }
+
+  .service-description {
+    color: $text-light;
+    margin: 0;
+    font-size: 0.9rem;
+  }
+
+  .price-amount {
+    font-weight: 600;
+    color: $accent-color;
+    font-size: 1.2rem;
+    white-space: nowrap;
+  }
+
+  .price-note {
+    margin: 30px 0;
+    padding: 15px;
+    background-color: rgba($accent-color, 0.05);
+    border-left: 4px solid $accent-color;
+    font-size: 0.9rem;
+    color: $text-light;
+  }
+
+  .contact-info {
+    text-align: center;
+    margin-top: 50px;
+    padding: 30px;
+    background-color: $light-gray;
+    border-radius: 10px;
+
+    h3 {
+      color: $secondary-color;
+      margin-bottom: 10px;
+    }
+
+    a {
+      color: $primary-color;
+      text-decoration: none;
+      font-weight: 500;
+      
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .price-list-container {
+    padding: 40px 0;
+
+    .main-title {
+      font-size: 2rem;
+    }
+
+    .price-item {
+      flex-direction: column;
+      align-items: flex-start;
+      
+      .price-amount {
+        margin-top: 10px;
+      }
+    }
+  }
+}
