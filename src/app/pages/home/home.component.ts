@@ -100,8 +100,8 @@ export class HomeComponent implements OnInit, OnDestroy {
   }
 
   setCurrentSlide(index: number) {
+    this.stopSlideShow(); // Stop the automatic slideshow when user interacts
     this.currentSlide = index;
-    this.stopSlideShow();
-    this.startSlideShow();
+    this.startSlideShow(); // Restart the slideshow after user selection
   }
 }
