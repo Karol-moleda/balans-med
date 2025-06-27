@@ -22,27 +22,48 @@ interface PriceCategory {
 export class PriceListComponent {
   priceCategories: PriceCategory[] = [
     {
-      name: 'Konsultacje',
+      name: 'Konsultacje psychiatryczne',
       items: [
-        { service: 'Konsultacja fizjoterapeutyczna', price: '150 zł', description: 'Obejmuje wywiad i badanie' },
-        { service: 'Konsultacja kontrolna', price: '100 zł' },
-        { service: 'Terapia manualna', price: '150-200 zł' }
+        { 
+          service: 'Konsultacja psychiatryczna pierwszorazowa', 
+          price: '350-400 zł', 
+          description: '40 min (dorośli/młodzież)' 
+        },
+        { 
+          service: 'Konsultacja psychiatryczna kontrolna', 
+          price: '250-300 zł', 
+          description: '20 min (dorośli/młodzież)' 
+        }
       ]
     },
     {
-      name: 'Masaże',
+      name: 'Usługi psychologiczne',
       items: [
-        { service: 'Masaż klasyczny (60 min)', price: '150 zł' },
-        { service: 'Masaż leczniczy (45 min)', price: '130 zł' },
-        { service: 'Masaż sportowy (60 min)', price: '170 zł' }
+        { 
+          service: 'Diagnoza/Opinia psychologiczna', 
+          price: '300 zł', 
+          description: '60 min (niezbędne 2-3 wizyty)' 
+        },
+        { 
+          service: 'Omówienie diagnozy psychologicznej', 
+          price: '100 zł', 
+          description: '15 min' 
+        },
+        { 
+          service: 'Wsparcie/poradnictwo psychologiczne', 
+          price: '200-250 zł', 
+          description: '50 min' 
+        }
       ]
     },
     {
-      name: 'Rehabilitacja',
+      name: 'Psychoterapia',
       items: [
-        { service: 'Indywidualna sesja rehabilitacyjna (60 min)', price: '180 zł' },
-        { service: 'Fizjoterapia uroginekologiczna', price: '200 zł' },
-        { service: 'Terapia powięziowa', price: '160 zł' }
+        { 
+          service: 'Sesja psychoterapii indywidualnej', 
+          price: '180-230 zł', 
+          description: '50 min' 
+        }
       ]
     }
   ];

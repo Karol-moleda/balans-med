@@ -28,7 +28,9 @@ export class HeaderComponent implements OnInit {
     { path: '/doctors', label: 'Lekarze' },
     { path: '/price-list', label: 'Cennik' },
     { path: '/contact', label: 'Kontakt' },
-  ];  isMobile = false;
+  ];
+  
+  isMobile = false;
   isMenuOpen = false;
   private platformId = inject(PLATFORM_ID);
 
@@ -46,7 +48,7 @@ export class HeaderComponent implements OnInit {
   @HostListener('window:resize')
   checkScreenSize(): void {
     if (isPlatformBrowser(this.platformId)) {
-      this.isMobile = window.innerWidth < 768;
+      this.isMobile = window.innerWidth <= 768;
       if (!this.isMobile) {
         this.isMenuOpen = false;
       }

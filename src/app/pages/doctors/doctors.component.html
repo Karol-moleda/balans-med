@@ -10,9 +10,12 @@
         </div>
         <div class="doctor-info">
           <h3 class="doctor-name">{{doctor.name}}</h3>
-          <p class="doctor-specialty">{{doctor.specialty}}</p>
-          <p class="doctor-description">{{doctor.description}}</p>
-          <button class="appointment-button">Umów wizytę</button>
+          <div class="doctor-description" [innerHTML]="(doctor.formattedDescription || '') | safe:'html'"></div>
+          <button class="read-more-btn" *ngIf="doctor.description.length > 300" 
+                  (click)="toggleDescription(doctor)" 
+                  [class.expanded]="doctor.isExpanded">
+            {{ doctor.isExpanded ? 'Zwiń' : 'Czytaj więcej' }}
+          </button>
         </div>
       </div>
     </div>

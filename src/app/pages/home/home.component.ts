@@ -38,40 +38,29 @@ export class HomeComponent implements OnInit, OnDestroy {
 
   services = [
     {
-      icon: 'medical_services',
-      title: 'Medycyna rodzinna',
-      description:
-        'Kompleksowa opieka dla całej rodziny, od niemowląt po osoby starsze. Badania profilaktyczne, diagnostyka i leczenie.',
-    },
-    {
-      icon: 'favorite',
-      title: 'Kardiologia',
-      description:
-        'Specjalistyczne badania i konsultacje kardiologiczne. EKG, echo serca, testy wysiłkowe i holtery.',
-    },
-    {
-      icon: 'fitness_center',
-      title: 'Rehabilitacja',
-      description:
-        'Profesjonalna fizjoterapia i rehabilitacja. Indywidualne programy ćwiczeń dostosowane do potrzeb pacjenta.',
-    },
-    {
-      icon: 'child_care',
-      title: 'Pediatria',
-      description:
-        'Troskliwa opieka nad dziećmi w każdym wieku. Badania profilaktyczne, szczepienia i leczenie chorób dziecięcych.',
-    },
-    {
       icon: 'psychology',
-      title: 'Neurologia',
-      description:
-        'Diagnostyka i leczenie chorób układu nerwowego. Konsultacje neurologiczne, EMG, EEG.',
+      title: 'Psychiatria dorosłych',
+      description: 'Kompleksowa opieka psychiatryczna dla osób dorosłych. Diagnostyka, leczenie farmakologiczne i psychoterapia zaburzeń psychicznych.'
     },
     {
-      icon: 'woman',
-      title: 'Ginekologia',
-      description:
-        'Kompleksowa opieka ginekologiczna. Badania profilaktyczne, USG, konsultacje specjalistyczne.',
+      icon: 'child_friendly',
+      title: 'Psychiatria dzieci i młodzieży',
+      description: 'Specjalistyczna opieka psychiatryczna dostosowana do potrzeb najmłodszych pacjentów i nastolatków.'
+    },
+    {
+      icon: 'assessment',
+      title: 'Wizyta diagnostyczna psychologiczna',
+      description: 'Profesjonalne badania psychologiczne: ocena osobowości, funkcji poznawczych, wydawanie opinii do celów prawnych.'
+    },
+    {
+      icon: 'support',
+      title: 'Poradnictwo oraz wsparcie psychologiczne',
+      description: 'Indywidualne konsultacje psychologiczne, wsparcie w trudnych sytuacjach życiowych i kryzysach emocjonalnych.'
+    },
+    {
+      icon: 'healing',
+      title: 'Psychoterapia dorosłych',
+      description: 'Różnorodne formy psychoterapii dostosowane do indywidualnych potrzeb pacjenta i specyfiki problemu.'
     },
   ];
   currentSlide = 0;

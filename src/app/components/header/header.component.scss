@@ -7,6 +7,9 @@
   background-color: #1976d2;
   position: relative;
   z-index: 1000;
+  width: 100%;
+  box-sizing: border-box;
+  overflow: visible;
 
   @include styles.tablet {
     padding: 0 16px;
@@ -52,15 +55,16 @@
   padding: 8px;
   border-radius: 50%;
   transition: background-color 0.3s;
+  z-index: 1002;
 
   @include styles.tablet {
-    display: flex;
+    display: flex !important;
     align-items: center;
     justify-content: center;
   }
 
   @include styles.mobile {
-    display: flex;
+    display: flex !important;
     align-items: center;
     justify-content: center;
   }
@@ -99,11 +103,12 @@
       padding 0.3s ease;
     gap: 0;
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
-    z-index: 999;
+    z-index: 1001;
 
     &.open {
       max-height: 400px;
       padding: 8px 0;
+      overflow: visible;
     }
 
     .nav-link {

@@ -6,23 +6,27 @@
   padding: 3rem 2rem;
   margin-top: 3rem;
   box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  box-sizing: border-box;
+  overflow-x: hidden;
   
   .footer-content {
     max-width: 1200px;
     margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 2rem;
+    display: grid;
+    grid-template-columns: 2fr 2fr 1.5fr 1.5fr;
+    gap: 3rem;
+    align-items: start;
     
     @include styles.tablet {
-      gap: 1.5rem;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
     }
     
     @include styles.mobile {
-      flex-direction: column;
+      grid-template-columns: 1fr;
       text-align: center;
-      gap: 2rem;
+      gap: 2.5rem;
     }
     
     h4 {
@@ -43,12 +47,12 @@
       }
     }
     
-    .footer-info, .footer-contact, .footer-social {
-      flex: 1;
-      min-width: 200px;
+    .footer-info, .footer-contact, .footer-social, .footer-links {
+      display: flex;
+      flex-direction: column;
       
       @include styles.mobile {
-        min-width: 100%;
+        align-items: center;
       }
     }
     
@@ -76,6 +80,48 @@
           &:hover {
             background-color: styles.$habr-blue-light;
             transform: translateY(-3px);
+          }
+        }
+      }
+    }
+    
+    .footer-links {
+      ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        
+        li {
+          margin-bottom: 0.8rem;
+          
+          a {
+            color: styles.$light-gray;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            padding: 0.2rem 0;
+            display: inline-block;
+            position: relative;
+            
+            &:hover {
+              color: styles.$habr-blue-light;
+              transform: translateX(3px);
+            }
+            
+            &:after {
+              content: '';
+              position: absolute;
+              width: 0;
+              height: 1px;
+              bottom: 0;
+              left: 0;
+              background-color: styles.$habr-blue-light;
+              transition: width 0.3s ease;
+            }
+            
+            &:hover:after {
+              width: 100%;
+            }
           }
         }
       }

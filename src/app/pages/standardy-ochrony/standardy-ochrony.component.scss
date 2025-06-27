@@ -1,0 +1,131 @@
+@use '../../../styles-variables' as styles;
+
+.page-container {
+  min-height: 80vh;
+  padding: 2rem;
+  background-color: styles.$light-bg;
+  
+  .content-wrapper {
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: styles.$white;
+    padding: 3rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    
+    @include styles.tablet {
+      padding: 2rem;
+    }
+    
+    @include styles.mobile {
+      padding: 1.5rem;
+    }
+    
+    h1 {
+      color: styles.$habr-blue-dark;
+      font-size: 2.5rem;
+      margin-bottom: 2rem;
+      text-align: center;
+      font-weight: 600;
+      
+      @include styles.tablet {
+        font-size: 2rem;
+      }
+      
+      @include styles.mobile {
+        font-size: 1.8rem;
+        margin-bottom: 1.5rem;
+      }
+    }
+    
+    .intro-section {
+      margin-bottom: 3rem;
+      text-align: center;
+      
+      h2 {
+        color: styles.$habr-blue-primary;
+        font-size: 1.8rem;
+        margin-bottom: 1.5rem;
+        font-weight: 500;
+        
+        @include styles.tablet {
+          font-size: 1.6rem;
+        }
+        
+        @include styles.mobile {
+          font-size: 1.4rem;
+          margin-bottom: 1rem;
+        }
+      }
+      
+      .intro-text {
+        font-size: 1.2rem;
+        line-height: 1.6;
+        color: styles.$text-dark;
+        max-width: 800px;
+        margin: 0 auto;
+        
+        @include styles.mobile {
+          font-size: 1.1rem;
+        }
+      }
+    }
+    
+    .standards-list {
+      .standard-item {
+        display: flex;
+        margin-bottom: 2rem;
+        padding: 1.5rem;
+        background-color: styles.$habr-blue-pale;
+        border-radius: 8px;
+        border-left: 4px solid styles.$habr-blue-primary;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+        
+        &:hover {
+          transform: translateY(-2px);
+          box-shadow: 0 6px 20px rgba(91, 135, 197, 0.15);
+        }
+        
+        @include styles.mobile {
+          flex-direction: column;
+          padding: 1rem;
+          margin-bottom: 1.5rem;
+        }
+        
+        .standard-number {
+          flex-shrink: 0;
+          width: 50px;
+          height: 50px;
+          background-color: styles.$habr-blue-primary;
+          color: styles.$white;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 1.2rem;
+          font-weight: 600;
+          margin-right: 1.5rem;
+          
+          @include styles.mobile {
+            margin: 0 auto 1rem auto;
+          }
+        }
+        
+        .standard-content {
+          flex: 1;
+          
+          p {
+            margin: 0;
+            font-size: 1rem;
+            line-height: 1.6;
+            color: styles.$text-dark;
+            
+            @include styles.mobile {
+              text-align: center;
+            }
+          }
+        }
+      }
+    }
+  }
+}

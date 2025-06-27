@@ -1,0 +1,289 @@
+@use '../../../styles-variables' as styles;
+
+.page-container {
+  min-height: 80vh;
+  padding: 2rem;
+  background-color: styles.$light-bg;
+  
+  .content-wrapper {
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: styles.$white;
+    padding: 3rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    
+    @include styles.tablet {
+      padding: 2rem;
+    }
+    
+    @include styles.mobile {
+      padding: 1.5rem;
+    }
+    
+    h1 {
+      color: styles.$habr-blue-dark;
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      text-align: center;
+      font-weight: 600;
+      line-height: 1.2;
+      
+      @include styles.tablet {
+        font-size: 2rem;
+      }
+      
+      @include styles.mobile {
+        font-size: 1.6rem;
+        margin-bottom: 1.5rem;
+      }
+    }
+    
+    .clinic-name {
+      text-align: center;
+      margin-bottom: 3rem;
+      
+      h2 {
+        color: styles.$habr-blue-primary;
+        font-size: 2rem;
+        font-weight: 500;
+        margin: 0;
+        
+        @include styles.mobile {
+          font-size: 1.5rem;
+        }
+      }
+    }
+    
+    .section {
+      margin-bottom: 3rem;
+      
+      h2 {
+        color: styles.$habr-blue-dark;
+        font-size: 1.4rem;
+        margin-bottom: 1.5rem;
+        font-weight: 600;
+        border-bottom: 2px solid styles.$habr-blue-light;
+        padding-bottom: 0.5rem;
+        
+        @include styles.mobile {
+          font-size: 1.2rem;
+        }
+      }
+      
+      .paragraph-list {
+        .paragraph-item {
+          margin-bottom: 1.5rem;
+          
+          .number {
+            display: inline;
+            color: styles.$habr-blue-primary;
+            font-weight: 600;
+            font-size: 1rem;
+            margin-right: 0.5rem;
+          }
+          
+          p {
+            display: inline;
+            margin: 0;
+            font-size: 1rem;
+            line-height: 1.6;
+            color: styles.$text-dark;
+            text-align: justify;
+          }
+          
+          .sub-list,
+          .conditions-list,
+          .obligations-list {
+            list-style: none;
+            padding: 0;
+            margin: 0.5rem 0 0 1.5rem;
+            
+            li {
+              background-color: styles.$light-bg;
+              padding: 0.8rem;
+              margin-bottom: 0.5rem;
+              border-radius: 6px;
+              border-left: 3px solid styles.$habr-blue-light;
+              font-size: 0.95rem;
+              line-height: 1.5;
+              
+              &:before {
+                content: "•";
+                color: styles.$habr-blue-primary;
+                font-weight: bold;
+                margin-right: 0.5rem;
+              }
+            }
+          }
+          
+          .prohibitions-list {
+            list-style: none;
+            padding: 0;
+            margin: 0.5rem 0 0 1.5rem;
+            
+            li {
+              background-color: #ffebee;
+              padding: 0.8rem;
+              margin-bottom: 0.5rem;
+              border-radius: 6px;
+              border-left: 3px solid #f44336;
+              font-size: 0.95rem;
+              line-height: 1.5;
+              display: flex;
+              align-items: center;
+              
+              i {
+                color: #f44336;
+                margin-right: 0.5rem;
+                width: 20px;
+              }
+            }
+          }
+          
+          .payment-methods {
+            margin-top: 1rem;
+            margin-left: 1.5rem;
+            background-color: styles.$habr-blue-pale;
+            padding: 1rem;
+            border-radius: 8px;
+            
+            h4 {
+              color: styles.$habr-blue-dark;
+              margin: 0 0 0.8rem 0;
+              font-size: 1rem;
+            }
+            
+            .payment-list {
+              list-style: none;
+              padding: 0;
+              margin: 0;
+              display: flex;
+              gap: 1rem;
+              flex-wrap: wrap;
+              
+              @include styles.mobile {
+                flex-direction: column;
+                gap: 0.5rem;
+              }
+              
+              li {
+                background-color: styles.$white;
+                padding: 0.5rem 1rem;
+                border-radius: 6px;
+                border: 1px solid styles.$border-color;
+                display: flex;
+                align-items: center;
+                font-size: 0.9rem;
+                
+                i {
+                  color: styles.$habr-blue-primary;
+                  margin-right: 0.5rem;
+                  width: 20px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    
+    .attachments-section {
+      margin-top: 4rem;
+      padding-top: 2rem;
+      border-top: 2px solid styles.$habr-blue-light;
+      
+      h2 {
+        color: styles.$habr-blue-dark;
+        font-size: 1.8rem;
+        margin-bottom: 2rem;
+        text-align: center;
+        font-weight: 600;
+      }
+      
+      .attachment {
+        margin-bottom: 3rem;
+        
+        h3 {
+          color: styles.$habr-blue-primary;
+          font-size: 1.3rem;
+          margin-bottom: 1rem;
+          font-weight: 500;
+        }
+        
+        .price-table {
+          overflow-x: auto;
+          
+          table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: styles.$white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            
+            thead {
+              background-color: styles.$habr-blue-primary;
+              
+              tr th {
+                color: styles.$white;
+                padding: 1rem;
+                text-align: left;
+                font-weight: 600;
+                font-size: 0.95rem;
+              }
+            }
+            
+            tbody {
+              tr {
+                &:nth-child(even) {
+                  background-color: styles.$light-bg;
+                }
+                
+                &:hover {
+                  background-color: styles.$habr-blue-pale;
+                }
+                
+                td {
+                  padding: 1rem;
+                  border-bottom: 1px solid styles.$border-color;
+                  font-size: 0.9rem;
+                  line-height: 1.4;
+                  
+                  &:first-child {
+                    font-weight: 600;
+                    color: styles.$habr-blue-primary;
+                    text-align: center;
+                    width: 60px;
+                  }
+                  
+                  &:last-child {
+                    font-weight: 600;
+                    color: styles.$habr-blue-dark;
+                  }
+                  
+                  strong {
+                    color: #4caf50;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    
+    .signature-section {
+      margin-top: 3rem;
+      padding-top: 2rem;
+      border-top: 1px solid styles.$border-color;
+      text-align: right;
+      
+      p {
+        font-size: 1rem;
+        color: styles.$text-dark;
+        margin: 0;
+      }
+    }
+  }
+}

@@ -1,50 +1,108 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { SafePipe } from '../../shared/pipes/safe.pipe';
 
 interface Doctor {
   id: number;
   name: string;
-  specialty: string;
   description: string;
   image: string;
+  formattedDescription?: string;
+  isExpanded?: boolean;
 }
 
 @Component({
   selector: 'app-doctors',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, SafePipe],
   templateUrl: './doctors.component.html',
   styleUrls: ['./doctors.component.scss']
 })
-export class DoctorsComponent {
+export class DoctorsComponent implements OnInit {
   doctors: Doctor[] = [
     {
       id: 1,
-      name: 'Dr. Anna Kowalska',
-      specialty: 'Kardiologia',
-      description: 'Specjalista z wieloletnim doświadczeniem w diagnozowaniu i leczeniu chorób serca.',
-      image: 'https://placehold.co/300x400/2a7d8c/white?text=Dr.+Kowalska'
+      name: 'TATIANA HUZAVA',
+      description: 'Jestem lekarzem specjalistą psychiatrii. Absolwentką Białoruskiego Państwowego Uniwersytetu Medycznego, po nostryfikacji dyplomu w Polsce w 2016 roku. Rezydenturę odbywałam w Szpitalu Klinicznym im dr Józefa Babińskiego w Krakowie, gdzie aktualnie kontynuuję pracę na Oddziale Psychogeriatrii. Stale poszerzam swoją wiedzę uczestnicząc w kursach oraz szkoleniach z zakresu psychiatrii dorosłych oraz wieku dziecięcego. W pracy z pacjentem staram się stworzyć atmosferę spokoju i zrozumienia, żeby jak najlepiej móc poznać jego problematykę, a następnie trafnie dobrać leczenie farmakologiczne i ewentualnie zasugerować najbardziej odpowiedni nurt psychoterapii. Zakres świadczeń: poradnictwo psychiatryczne dorosłych oraz dzieci i młodzieży od 14 roku życia. Zainteresowania prywatne: książki, sport, podróżowania Zakres usług: konsultacja psychiatryczna dorośli/ dzieci od 14 roku życia.',
+      image: 'https://placehold.co/300x400/2a7d8c/white?text=TATIANA HUZAVA'
     },
     {
       id: 2,
-      name: 'Dr. Jan Nowak',
-      specialty: 'Neurologia',
-      description: 'Ekspert w zakresie chorób układu nerwowego z 15-letnim doświadczeniem klinicznym.',
-      image: 'https://placehold.co/300x400/2a7d8c/white?text=Dr.+Nowak'
+      name: 'MGR. ALEKSANDRA CZARNOTA-MAZUR',
+      description: 'Jestem absolwentką kierunku psychologia stosowana na Uniwersytecie Jagiellońskim.Psychoterapeutką w trakcie szkolenia prowadzonego przez Krakowskim Centrum Edukacyjnym Cogito, akredytowanego przez Polskie Towarzystwo Psychiatryczne, a także interwentem kryzysowym.Wiedzę oraz doświadczenie zawodowe zdobywałam, m.in.w Szpitalu Klinicznym im.Dr.J.Babińskiego w Krakowie oraz Szpitalu im.L.Rydygiera w Krakowie, a także w czasie licznych szkoleń doszkalających. Swoją pracę poddaje regularnej superwizji indywidualnej oraz grupowej.Jestem również członkiem Polskiego Towarzystwa Psychiatrycznego, a także Sekcji Naukowej Psychoterapii Polskiego Towarzystwa Psychiatrycznego. Pracę w prywatnym gabinecie łączę z pracą na dziennym oddziale psychiatrycznym w Szpitalu im.dr J.Babińskiego, gdzie prowadzę zarówno procesy indywidualne, jak i grupy terapeutyczne, a także zajęcia z psychodramy. Specjalizuje się w pracy psychoterapeutycznej z osobami dorosłymi z zaburzeniami osobowości, a także osobami doświadczającymi objawów depresji, choroby afektywnej dwubiegunowej(CHAD), zaburzeń lękowych, psychosomatycznych oraz osobami z doświadczeniami psychotycznymi. Nie pracuje z uzależnieniami. W czym mogę pomóc? ● rozwój osobisty ● poznanie i zrozumienie siebie ● budowanie zdrowych i satysfakcjonujących związków z drugim człowiekiem ● zdrowa komunikacja z innymi ● budowanie motywacji ● radzenie sobie z trudnymi emocjami ● obniżony nastrój ● niskie poczucie własnej wartości ● lęki i nerwowość ● zachowania autodestrukcyjne i samookaleczenia ● sytuacje kryzysowe',
+      image: 'https://placehold.co/300x400/2a7d8c/white?text=MGR. ALEKSANDRA CZARNOTA-MAZUR'
     },
     {
       id: 3,
-      name: 'Dr. Marta Wiśniewska',
-      specialty: 'Dermatologia',
-      description: 'Specjalistka dermatologii estetycznej i leczniczej, absolwentka prestiżowych szkoleń.',
-      image: 'https://placehold.co/300x400/2a7d8c/white?text=Dr.+Wisniewska'
+      name: 'KATARZYNA FRYDRYK',
+      description: 'Jestem absolwentką psychologii na Akademii Pedagogiki Specjalnej w Warszawie, ze specjalnością psychologia kliniczna. Ukończyłam także szkolenie z Terapii Skoncentrowanej na Rozwiązaniach (TSR) w CTSR. Doświadczenie zawodowe zdobywałam m.in. w Krajowym Ośrodku Adopcyjno-Opiekuńczym oraz w Świetlicy Opiekuńczej, wspierając dzieci i rodziny w trudnych sytuacjach życiowych. Posiadam również doświadczenie w obszarze HR i doradztwa personalnego. W pracy terapeutycznej ważna jest dla mnie autentyczna relacja - oparta na zaufaniu, akceptacji i wzajemnym szacunku. Tworzę bezpieczną przestrzeń, w której można się zatrzymać, poczuć komfortowo i - bez oceniania - podzielić emocjami, doświadczeniami i tym, co trudne. W swojej praktyce korzystam z technik podejścia poznawczo-behawioralnego (CBT) oraz TSR, wspierając pacjentów w odnajdywaniu skutecznych sposobów na poprawę jakości życia. Na co dzień pracuję z dorosłymi osobami, które zmagają się z lękiem, obniżonym nastrojem, niską samooceną, przewlekłym stresem, wypaleniem zawodowym czy trudnościami w relacjach. Towarzyszę także w przechodzeniu przez kryzysy życiowe, poczucie samotności i zagubienia. Pomagam lepiej rozumieć siebie, wzmacniać poczucie sprawczości i budować życie w zgodzie z własnymi wartościami. Dbam o swój rozwój zawodowy - regularnie uczestniczę w szkoleniach, webinarach i superwizjach, by móc wspierać moich pacjentów z uważnością, otwartością i w oparciu o rzetelną wiedzę.',
+      image: 'https://placehold.co/300x400/2a7d8c/white?text=KATARZYNA FRYDRYK'
     },
     {
       id: 4,
-      name: 'Dr. Piotr Zieliński',
-      specialty: 'Ortopedia',
-      description: 'Ortopeda specjalizujący się w leczeniu urazów sportowych i zabiegach małoinwazyjnych.',
-      image: 'https://placehold.co/300x400/2a7d8c/white?text=Dr.+Zielinski'
+      name: 'ELŻBIETA KRAWIEC',
+      description: 'Jestem lekarzem medycyny, specjalistą psychiatrii z wieloletnim doświadczeniem klinicznym. Na co dzień pracuję w Szpitalu Klinicznym im. Dr. Józefa Babińskiego w Krakowie, gdzie kieruję Oddziałem Psychogeriatrycznym. Nieustannie poszerzam swoją wiedzę, uczestnicząc w licznych konferencjach naukowych oraz sympozjach. W pracy z pacjentem szczególną wagę przywiązuję do budowania przyjaznej atmosfery, która sprzyja osiągnięciu jak najlepszych efektów terapeutycznych. Moje zainteresowania zawodowe koncentrują się wokół psychiatrii dorosłych oraz psychogeriatrii. W czym mogę pomóc? ● zaburzenia nastroju ● depresja ● zaburzenia lękowe ● zaburzenia psychotyczne ● zaburzenia otępienne ● psychiatria dorosłych ● psychogeriatria',
+      image: 'https://placehold.co/300x400/2a7d8c/white?text=ELŻBIETA KRAWIEC'
+    },
+        {
+      id: 5,
+      name: 'AGNIESZKA SKRZYPOŃ',
+      description: 'Jestem absolwentką psychologii Uniwersytetu Jagiellońskiego, specjalistą psychologii klinicznej (ukończone 4-letnie szkolenie specjalizacyjne z zakresu psychologii klinicznej, ośrodek Szkolący - Szpital Kliniczny im. dra Józefa Babińskiego w Krakowie). W ramach szkolenia specjalizacyjnego odbyłam liczne staże kliniczne ukierunkowane na zdobywanie praktycznych umiejętności z zakresu szeroko pojętej diagnozy klinicznej i pomocy psychologicznej. Ukończyłam studia podyplomowe &quot;Podstawy Psychoterapii&quot; przygotowujące do uzyskania Certyfikatu Psychoterapeuty prowadzonego przez Katedrę Psychoterapii Uniwersytetu Jagiellońskiego Collegium Medicum i atestowanego przez Sekcję Naukową Psychoterapii Polskiego Towarzystwa Psychiatrycznego. Poza tym poszerzałam swoje kompetencje na studiach podyplomowych “Psychogeriatria z elementami neuropsychologii” w Medycznym Centrum Kształcenia Podyplomowego Uniwersytetu Jagiellońskiego, a także “Psychologia Transportu” na Wydziale Zarządzania i Komunikacji Społecznej Uniwersytetu Jagiellońskiego. Na bieżąco zdobywam, poszerzam i aktualizuję swoją wiedzę z zakresu diagnozy psychologicznej, pomocy psychologicznej i psychoterapii na konferencjach i szkoleniach. Jestem członkiem Polskiego Towarzystwa Psychologicznego, a także Polskiego Towarzystwa Psychiatrycznego - Sekcja Naukowa Psychoterapii. Na co dzień pracuję w Oddziale Ogólnopsychiatrycznym Szpitala Klinicznego im. dra Józefa Babińskiego w Krakowie, Poradni Zdrowia Psychicznego tegoż szpitala. Poza tym przeprowadzam psychologiczne wizyty środowiskowe u Pacjentów leczących się psychiatrycznie.',
+      image: 'https://placehold.co/300x400/2a7d8c/white?text=AGNIESZKA SKRZYPOŃ-'
     }
   ];
+
+  ngOnInit() {
+    this.doctors.forEach(doctor => {
+      doctor.isExpanded = false;
+      doctor.formattedDescription = this.formatDescription(doctor.description, false);
+    });
+  }
+
+  formatDescription(description: string, isExpanded: boolean): string {
+    const maxLength = 250;
+    
+    // Jeśli opis ma być rozwinięty, formatuj pełny tekst
+    if (isExpanded) {
+      return this.formatFullDescription(description);
+    }
+    
+    // Jeśli opis jest krótki, zwróć go w całości
+    if (description.length <= maxLength) {
+      return this.formatFullDescription(description);
+    }
+    
+    // Skróć opis i dodaj "..."
+    let truncated = description.substring(0, maxLength);
+    
+    // Znajdź ostatni kompletny wyraz
+    const lastSpaceIndex = truncated.lastIndexOf(' ');
+    if (lastSpaceIndex > maxLength * 0.8) {
+      truncated = truncated.substring(0, lastSpaceIndex);
+    }
+    
+    return this.formatFullDescription(truncated) + '...';
+  }
+
+  private formatFullDescription(description: string): string {
+    // Formatowanie tekstu z punktami
+    let formatted = description
+      // Zamień punkty ● na listę HTML
+      .replace(/●\s+([^●]+)/g, '<li>$1</li>')
+      // Jeśli są elementy listy, owij je w <ul>
+      .replace(/(<li>.*<\/li>)/gs, '<ul>$1</ul>')
+      // Zamień podwójne spacje na <br>
+      .replace(/\n\n/g, '<br><br>')
+      .replace(/\n/g, '<br>')
+      // Pogrubianie tekstu w nawiasach kwadratowych lub po dwukropku
+      .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+      .replace(/([A-ZĄĆĘŁŃÓŚŹŻ][^:]*:)/g, '<strong>$1</strong>');
+    
+    return formatted;
+  }
+
+  toggleDescription(doctor: Doctor) {
+    doctor.isExpanded = !doctor.isExpanded;
+    doctor.formattedDescription = this.formatDescription(doctor.description, doctor.isExpanded);
+  }
 }
