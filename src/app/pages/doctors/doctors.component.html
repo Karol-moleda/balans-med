@@ -6,7 +6,10 @@
     <div class="doctors-grid">
       <div class="doctor-card" *ngFor="let doctor of doctors">
         <div class="doctor-image">
-          <img [src]="doctor.image" [alt]="doctor.name">
+          <img [src]="doctor.image" 
+               [alt]="doctor.name"
+               loading="lazy"
+               (error)="onImageError($event)">
         </div>
         <div class="doctor-info">
           <h3 class="doctor-name">{{doctor.name}}</h3>

@@ -4,12 +4,10 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "start:no-ssr": "ng serve --configuration development --no-ssr",
-    "build": "ng build",
-    "build:no-ssr": "ng build --configuration development --no-ssr",
+    "build": "ng build --configuration production",
+    "build:dev": "ng build --configuration development",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test",
-    "serve:ssr:balans-med-new": "node dist/balans-med-new/server/server.mjs"
+    "test": "ng test"
   },
   "private": true,
   "dependencies": {

@@ -27,6 +27,7 @@ export class HeaderComponent implements OnInit {
     { path: '/services', label: 'Nasze Usługi' },
     { path: '/doctors', label: 'Lekarze' },
     { path: '/price-list', label: 'Cennik' },
+    { path: '/gallery', label: 'Galeria' },
     { path: '/contact', label: 'Kontakt' },
   ];
   

@@ -1,0 +1,32 @@
+<div class="gallery-container">
+  <div class="gallery-header">
+    <h1>Galeria</h1>
+    <p>Poznaj nasze nowoczesne gabinety i przestronie wnętrza</p>
+  </div>
+
+  <div class="gallery-grid">
+    <div class="image-card" *ngFor="let image of images" (click)="openImageModal(image)">
+      <mat-card class="gallery-card">
+        <mat-card-content>
+          <img [src]="image.src" [alt]="image.alt" loading="lazy">
+          <div class="overlay">
+            <mat-icon>zoom_in</mat-icon>
+            <span>{{ image.title }}</span>
+          </div>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+
+  <div class="image-modal" *ngIf="selectedImage" (click)="closeModal()">
+    <div class="modal-content" (click)="$event.stopPropagation()">
+      <button mat-icon-button class="close-button" (click)="closeModal()">
+        <mat-icon>close</mat-icon>
+      </button>
+      <img [src]="selectedImage.src" [alt]="selectedImage.alt">
+      <div class="modal-info">
+        <h3>{{ selectedImage.title }}</h3>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,188 @@
+.gallery-container {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  min-height: calc(100vh - 120px);
+
+  .gallery-header {
+    text-align: center;
+    margin-bottom: 3rem;
+
+    h1 {
+      font-size: 2.5rem;
+      color: #2c5282;
+      margin-bottom: 1rem;
+      font-weight: 700;
+    }
+
+    p {
+      font-size: 1.1rem;
+      color: #666;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+  }
+
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .image-card {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: translateY(-5px);
+
+      .overlay {
+        opacity: 1;
+      }
+    }
+
+    .gallery-card {
+      height: 250px;
+      overflow: hidden;
+      position: relative;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+
+      mat-card-content {
+        padding: 0;
+        height: 100%;
+        position: relative;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          transition: transform 0.3s ease;
+        }
+
+        .overlay {
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background: rgba(44, 82, 130, 0.8);
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          opacity: 0;
+          transition: opacity 0.3s ease;
+          color: white;
+
+          mat-icon {
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+          }
+
+          span {
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+
+  // Modal styles
+  .image-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+
+    .modal-content {
+      position: relative;
+      max-width: 90%;
+      max-height: 90%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .close-button {
+        position: absolute;
+        top: -50px;
+        right: 0;
+        color: white;
+        z-index: 1001;
+
+        mat-icon {
+          font-size: 2rem;
+        }
+      }
+
+      img {
+        max-width: 100%;
+        max-height: calc(100% - 80px);
+        object-fit: contain;
+        border-radius: 8px;
+      }
+
+      .modal-info {
+        background: white;
+        padding: 1rem 2rem;
+        border-radius: 8px;
+        margin-top: 1rem;
+        text-align: center;
+
+        h3 {
+          margin: 0;
+          color: #2c5282;
+        }
+      }
+    }
+  }
+
+  // Responsive design
+  @media (max-width: 768px) {
+    padding: 1rem;
+
+    .gallery-header {
+      margin-bottom: 2rem;
+
+      h1 {
+        font-size: 2rem;
+      }
+    }
+
+    .gallery-grid {
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+
+    .image-card .gallery-card {
+      height: 200px;
+    }
+
+    .image-modal .modal-content {
+      max-width: 95%;
+      max-height: 85%;
+
+      .close-button {
+        top: -40px;
+      }
+
+      .modal-info {
+        padding: 0.5rem 1rem;
+        margin-top: 0.5rem;
+
+        h3 {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+}

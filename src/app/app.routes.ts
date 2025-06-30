@@ -31,5 +31,9 @@ export const routes: Routes = [
     path: 'polityka-prywatnosci',
     loadComponent: () => import('./pages/polityka-prywatnosci/polityka-prywatnosci.component').then(m => m.PolitykaPrywatnosciComponent)
   },
+  {
+    path: 'gallery',
+    loadComponent: () => import('./pages/gallery/gallery.component').then(m => m.GalleryComponent)
+  },
   { path: '**', redirectTo: '' }
 ];

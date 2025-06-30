@@ -15,21 +15,21 @@ export class HomeComponent implements OnInit, OnDestroy {
   slides = [
     {
       image:
-        'https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80',
+        'img/1.jpg',
       alt: 'Balans Med - Recepcja',
       title: 'Witaj w Balans Med',
       description: 'Nowoczesna klinika, profesjonalna opieka medyczna dla całej rodziny',
     },
     {
       image:
-        'https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80',
+        'img/8.jpg',
       alt: 'Balans Med - Gabinet',
       title: 'Kompleksowa opieka',
       description: 'Najnowsze technologie i doświadczeni specjaliści w jednym miejscu',
     },
     {
       image:
-        'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80',
+        'img/3.jpg',
       alt: 'Balans Med - Zespół',
       title: 'Zespół ekspertów',
       description: 'Nasi lekarze to specjaliści z wieloletnim doświadczeniem',

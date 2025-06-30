@@ -22,21 +22,21 @@ export class DoctorsComponent implements OnInit {
   doctors: Doctor[] = [
     {
       id: 1,
-      name: 'TATIANA HUZAVA',
+      name: 'TATSIANA HUZAVA',
       description: 'Jestem lekarzem specjalistą psychiatrii. Absolwentką Białoruskiego Państwowego Uniwersytetu Medycznego, po nostryfikacji dyplomu w Polsce w 2016 roku. Rezydenturę odbywałam w Szpitalu Klinicznym im dr Józefa Babińskiego w Krakowie, gdzie aktualnie kontynuuję pracę na Oddziale Psychogeriatrii. Stale poszerzam swoją wiedzę uczestnicząc w kursach oraz szkoleniach z zakresu psychiatrii dorosłych oraz wieku dziecięcego. W pracy z pacjentem staram się stworzyć atmosferę spokoju i zrozumienia, żeby jak najlepiej móc poznać jego problematykę, a następnie trafnie dobrać leczenie farmakologiczne i ewentualnie zasugerować najbardziej odpowiedni nurt psychoterapii. Zakres świadczeń: poradnictwo psychiatryczne dorosłych oraz dzieci i młodzieży od 14 roku życia. Zainteresowania prywatne: książki, sport, podróżowania Zakres usług: konsultacja psychiatryczna dorośli/ dzieci od 14 roku życia.',
-      image: 'https://placehold.co/300x400/2a7d8c/white?text=TATIANA HUZAVA'
+      image: 'img/Tatsiana.jpg'
     },
     {
       id: 2,
       name: 'MGR. ALEKSANDRA CZARNOTA-MAZUR',
       description: 'Jestem absolwentką kierunku psychologia stosowana na Uniwersytecie Jagiellońskim.Psychoterapeutką w trakcie szkolenia prowadzonego przez Krakowskim Centrum Edukacyjnym Cogito, akredytowanego przez Polskie Towarzystwo Psychiatryczne, a także interwentem kryzysowym.Wiedzę oraz doświadczenie zawodowe zdobywałam, m.in.w Szpitalu Klinicznym im.Dr.J.Babińskiego w Krakowie oraz Szpitalu im.L.Rydygiera w Krakowie, a także w czasie licznych szkoleń doszkalających. Swoją pracę poddaje regularnej superwizji indywidualnej oraz grupowej.Jestem również członkiem Polskiego Towarzystwa Psychiatrycznego, a także Sekcji Naukowej Psychoterapii Polskiego Towarzystwa Psychiatrycznego. Pracę w prywatnym gabinecie łączę z pracą na dziennym oddziale psychiatrycznym w Szpitalu im.dr J.Babińskiego, gdzie prowadzę zarówno procesy indywidualne, jak i grupy terapeutyczne, a także zajęcia z psychodramy. Specjalizuje się w pracy psychoterapeutycznej z osobami dorosłymi z zaburzeniami osobowości, a także osobami doświadczającymi objawów depresji, choroby afektywnej dwubiegunowej(CHAD), zaburzeń lękowych, psychosomatycznych oraz osobami z doświadczeniami psychotycznymi. Nie pracuje z uzależnieniami. W czym mogę pomóc? ● rozwój osobisty ● poznanie i zrozumienie siebie ● budowanie zdrowych i satysfakcjonujących związków z drugim człowiekiem ● zdrowa komunikacja z innymi ● budowanie motywacji ● radzenie sobie z trudnymi emocjami ● obniżony nastrój ● niskie poczucie własnej wartości ● lęki i nerwowość ● zachowania autodestrukcyjne i samookaleczenia ● sytuacje kryzysowe',
-      image: 'https://placehold.co/300x400/2a7d8c/white?text=MGR. ALEKSANDRA CZARNOTA-MAZUR'
+      image: 'img/Aleksandra.jpg'
     },
     {
       id: 3,
       name: 'KATARZYNA FRYDRYK',
       description: 'Jestem absolwentką psychologii na Akademii Pedagogiki Specjalnej w Warszawie, ze specjalnością psychologia kliniczna. Ukończyłam także szkolenie z Terapii Skoncentrowanej na Rozwiązaniach (TSR) w CTSR. Doświadczenie zawodowe zdobywałam m.in. w Krajowym Ośrodku Adopcyjno-Opiekuńczym oraz w Świetlicy Opiekuńczej, wspierając dzieci i rodziny w trudnych sytuacjach życiowych. Posiadam również doświadczenie w obszarze HR i doradztwa personalnego. W pracy terapeutycznej ważna jest dla mnie autentyczna relacja - oparta na zaufaniu, akceptacji i wzajemnym szacunku. Tworzę bezpieczną przestrzeń, w której można się zatrzymać, poczuć komfortowo i - bez oceniania - podzielić emocjami, doświadczeniami i tym, co trudne. W swojej praktyce korzystam z technik podejścia poznawczo-behawioralnego (CBT) oraz TSR, wspierając pacjentów w odnajdywaniu skutecznych sposobów na poprawę jakości życia. Na co dzień pracuję z dorosłymi osobami, które zmagają się z lękiem, obniżonym nastrojem, niską samooceną, przewlekłym stresem, wypaleniem zawodowym czy trudnościami w relacjach. Towarzyszę także w przechodzeniu przez kryzysy życiowe, poczucie samotności i zagubienia. Pomagam lepiej rozumieć siebie, wzmacniać poczucie sprawczości i budować życie w zgodzie z własnymi wartościami. Dbam o swój rozwój zawodowy - regularnie uczestniczę w szkoleniach, webinarach i superwizjach, by móc wspierać moich pacjentów z uważnością, otwartością i w oparciu o rzetelną wiedzę.',
-      image: 'https://placehold.co/300x400/2a7d8c/white?text=KATARZYNA FRYDRYK'
+      image: 'img/Katarzyna.jpg'
     },
     {
       id: 4,
@@ -48,7 +48,7 @@ export class DoctorsComponent implements OnInit {
       id: 5,
       name: 'AGNIESZKA SKRZYPOŃ',
       description: 'Jestem absolwentką psychologii Uniwersytetu Jagiellońskiego, specjalistą psychologii klinicznej (ukończone 4-letnie szkolenie specjalizacyjne z zakresu psychologii klinicznej, ośrodek Szkolący - Szpital Kliniczny im. dra Józefa Babińskiego w Krakowie). W ramach szkolenia specjalizacyjnego odbyłam liczne staże kliniczne ukierunkowane na zdobywanie praktycznych umiejętności z zakresu szeroko pojętej diagnozy klinicznej i pomocy psychologicznej. Ukończyłam studia podyplomowe &quot;Podstawy Psychoterapii&quot; przygotowujące do uzyskania Certyfikatu Psychoterapeuty prowadzonego przez Katedrę Psychoterapii Uniwersytetu Jagiellońskiego Collegium Medicum i atestowanego przez Sekcję Naukową Psychoterapii Polskiego Towarzystwa Psychiatrycznego. Poza tym poszerzałam swoje kompetencje na studiach podyplomowych “Psychogeriatria z elementami neuropsychologii” w Medycznym Centrum Kształcenia Podyplomowego Uniwersytetu Jagiellońskiego, a także “Psychologia Transportu” na Wydziale Zarządzania i Komunikacji Społecznej Uniwersytetu Jagiellońskiego. Na bieżąco zdobywam, poszerzam i aktualizuję swoją wiedzę z zakresu diagnozy psychologicznej, pomocy psychologicznej i psychoterapii na konferencjach i szkoleniach. Jestem członkiem Polskiego Towarzystwa Psychologicznego, a także Polskiego Towarzystwa Psychiatrycznego - Sekcja Naukowa Psychoterapii. Na co dzień pracuję w Oddziale Ogólnopsychiatrycznym Szpitala Klinicznego im. dra Józefa Babińskiego w Krakowie, Poradni Zdrowia Psychicznego tegoż szpitala. Poza tym przeprowadzam psychologiczne wizyty środowiskowe u Pacjentów leczących się psychiatrycznie.',
-      image: 'https://placehold.co/300x400/2a7d8c/white?text=AGNIESZKA SKRZYPOŃ-'
+      image: 'img/Agnieszka.png'
     }
   ];
 
@@ -99,6 +99,11 @@ export class DoctorsComponent implements OnInit {
       .replace(/([A-ZĄĆĘŁŃÓŚŹŻ][^:]*:)/g, '<strong>$1</strong>');
     
     return formatted;
+  }
+
+  onImageError(event: any) {
+    // Fallback to a default image if the original fails to load
+    event.target.src = 'img/5.jpg';
   }
 
   toggleDescription(doctor: Doctor) {
