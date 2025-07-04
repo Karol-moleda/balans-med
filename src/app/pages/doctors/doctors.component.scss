@@ -96,6 +96,22 @@ $box-shadow: 0 4px 20px rgba(42, 125, 140, 0.15);
   justify-content: center;
   border-radius: $border-radius $border-radius 0 0;
   
+  .doctor-placeholder {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, $primary-color 0%, color.adjust($primary-color, $lightness: -5%) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 2.2rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-align: center;
+    padding: 2rem;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  }
+  
   &::before {
     content: '';
     position: absolute;
@@ -144,7 +160,7 @@ $box-shadow: 0 4px 20px rgba(42, 125, 140, 0.15);
     
     // Fallback for missing images
     &:not([src]), &[src=""], &[src*="placeholder"] {
-      background: linear-gradient(135deg, $primary-color 0%, lighten($primary-color, 10%) 100%);
+      background: linear-gradient(135deg, $primary-color 0%, color.adjust($primary-color, $lightness: 10%) 100%);
       display: flex;
       align-items: center;
       justify-content: center;

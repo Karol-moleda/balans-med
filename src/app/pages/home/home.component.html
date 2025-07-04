@@ -80,11 +80,40 @@
       <div class="contact-info">
         <h3>Balans Med</h3>
         <p><mat-icon>location_on</mat-icon> ul.Przemiarki 23/10 30-348 Kraków</p>
-        <p><mat-icon>phone</mat-icon> +48 889 412 421</p>
         <p><mat-icon>email</mat-icon> balansmed.rejestracja&#64;gmail.com</p>
+        
+        <div class="location-info">
+          <div class="location-bus">
+            <mat-icon>directions_bus</mat-icon>
+            <p>Gabinet znajduje się około 5 minut pieszo od przystanków komunikacji miejskiej: „Kampus UJ" oraz „Kampus UP"</p>
+          </div>
+          
+          <div class="location-help">
+            <div class="help-content">
+              <p class="directions-help">
+                Jeśli zlokalizowanie gabinetu sprawi Państwu trudność, zapraszamy do kontaktu telefonicznego
+              </p>
+            </div>
+            <div class="help-phone">
+              <a href="tel:+48889412421">(889 412 421)</a>
+            </div>
+            <div class="help-description">
+              <p>– chętnie udzielimy szczegółowych wskazówek dojazdu.</p>
+            </div>
+          </div>
+        </div>
+        
         <h4>Godziny otwarcia:</h4>
-        <p>Poniedziałek - Piątek: 15:00-20:00</p>
-        <p>Sobota: 9:00 - 14:00</p>
+        <p>Zapraszamy Państwa od poniedziałku do piątku w godzinach 15-20</p>
+        <div class="registration-info">
+          <div class="registration-label">Rejestracja telefoniczna</div>
+          <div class="registration-phone">
+            <a href="tel:+48889412421">
+              <span class="phone-area">(889 412 421)</span>
+            </a>
+          </div>
+          <div class="registration-hours">możliwa jest od poniedziałku do piątku w godzinach 10-20</div>
+        </div>
         
         <div class="appointment-section">
           <h4>Umów wizytę</h4>
@@ -92,10 +121,12 @@
             Wizyty u naszych specjalistów można umówić również za pomocą portalu:
           </p>
           <div class="znany-lekarz-container">
-            <a href="https://www.znanylekarz.pl/placowki/balans-med" target="_blank" class="znany-lekarz-link">
-              <span class="link-text">Znany Lekarz</span>
-              <mat-icon>open_in_new</mat-icon>
+            <a class="zl-facility-url" href="https://www.znanylekarz.pl/placowki/balans-med" rel="nofollow" 
+              data-zlw-facility="balans-med" data-zlw-type="facility-big-with-saas-only" 
+              data-zlw-saas-only="true" data-zlw-a11y-title="Widget umówienia wizyty lekarskiej">
+              Balans-Med
             </a>
+            <div id="zl-widget-container"></div>
           </div>
         </div>
       </div>

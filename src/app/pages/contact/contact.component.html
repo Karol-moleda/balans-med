@@ -36,16 +36,18 @@
         <div class="info-card">
           <h3>Sposób rezerwacji</h3>
           <div class="info-item">
-            <i class="fa fa-laptop"></i>
             <p>
               Znany lekarz:
-              <a href="https://www.znanylekarz.pl/placowki/balans-med" target="_blank">{{
-                clinicInfo.reservation.online
-              }}</a>
-            </p>
+         
+            <a class="zl-facility-url" href="https://www.znanylekarz.pl/placowki/balans-med" rel="nofollow" 
+              data-zlw-facility="balans-med" data-zlw-type="facility-big-with-saas-only" 
+              data-zlw-saas-only="true" data-zlw-a11y-title="Widget umówienia wizyty lekarskiej">
+              Balans-Med
+            </a>
+            <div id="zl-widget-container"></div>
+    
           </div>
           <div class="info-item">
-            <i class="fa fa-phone"></i>
             <p>{{ clinicInfo.reservation.phone }}</p>
           </div>
         </div>

@@ -40,7 +40,7 @@ export class ServicesComponent implements OnInit {
     {
       id: 3,
       name: 'Wizyta diagnostyczna psychologiczna',
-      description: 'Kompleksowe badanie psychologiczne obejmujące różne aspekty funkcjonowania psychicznego.',
+      description: 'Wizyta diagnostyczna psychologiczna (badanie osobowości, badanie funkcji poznawczych/przesiewowe neuropsychologiczne/do stopnia niepełnosprawności/renty-wydanie opinii).',
       price: 250,
       category: 'diagnostyka',
       icon: 'fas fa-clipboard-check',

@@ -24,11 +24,11 @@ import { isPlatformBrowser } from '@angular/common';
 export class HeaderComponent implements OnInit {
   navLinks = [
     { path: '/', label: 'Strona główna' },
-    { path: '/services', label: 'Nasze Usługi' },
-    { path: '/doctors', label: 'Lekarze' },
-    { path: '/price-list', label: 'Cennik' },
-    { path: '/gallery', label: 'Galeria' },
-    { path: '/contact', label: 'Kontakt' },
+    { path: '/usługi', label: 'Nasze Usługi' },
+    { path: '/zespół', label: 'Nasz zespół' },
+    { path: '/cennik', label: 'Cennik' },
+    { path: '/zdjęcia', label: 'Galeria' },
+    { path: '/kontakt', label: 'Kontakt' },
   ];
   
   isMobile = false;

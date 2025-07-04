@@ -1,12 +1,18 @@
 <section class="doctors-section">
   <div class="container">
-    <h2 class="section-title">Nasz zespół lekarzy</h2>
+    <h2 class="section-title">Nasz zespół</h2>
     <p class="section-subtitle">Poznaj naszych doświadczonych specjalistów</p>
     
     <div class="doctors-grid">
       <div class="doctor-card" *ngFor="let doctor of doctors">
         <div class="doctor-image">
-          <img [src]="doctor.image" 
+          <!-- For Elżbieta Krawiec, we'll show a styled name -->
+          <div *ngIf="doctor.name.includes('ELŻBIETA KRAWIEC')" class="doctor-placeholder">
+            ELŻBIETA KRAWIEC
+          </div>
+          <!-- For other doctors, display image with fallback -->
+          <img *ngIf="!doctor.name.includes('ELŻBIETA KRAWIEC')" 
+               [src]="doctor.image" 
                [alt]="doctor.name"
                loading="lazy"
                (error)="onImageError($event)">

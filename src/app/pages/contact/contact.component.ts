@@ -23,7 +23,7 @@ export class ContactComponent {
     },
     hours: [
       { day: 'Poniedziałek - Piątek', hours: '15:00 - 20:00' },
-      { day: 'Sobota', hours: '9:00 - 14:00' },
+      { day: 'Sobota', hours: 'Zamknięte' },
       { day: 'Niedziela', hours: 'Zamknięte' },
     ],
     reservation: {

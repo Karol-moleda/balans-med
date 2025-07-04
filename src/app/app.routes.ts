@@ -4,19 +4,19 @@ import { HomeComponent } from './pages/home/home.component';
 export const routes: Routes = [
   { path: '', component: HomeComponent },
   {
-    path: 'services',
+    path: 'usługi',
     loadComponent: () => import('./pages/services/services.component').then(m => m.ServicesComponent)
   },
   {
-    path: 'contact',
+    path: 'kontakt',
     loadComponent: () => import('./pages/contact/contact.component').then(m => m.ContactComponent)
   },
     {
-    path: 'doctors',
+    path: 'zespół',
     loadComponent: () => import('./pages/doctors/doctors.component').then(m => m.DoctorsComponent)
   },
       {
-    path: 'price-list',
+    path: 'cennik',
     loadComponent: () => import('./pages/price-list/price-list.component').then(m => m.PriceListComponent)
   },
   {
@@ -32,7 +32,7 @@ export const routes: Routes = [
     loadComponent: () => import('./pages/polityka-prywatnosci/polityka-prywatnosci.component').then(m => m.PolitykaPrywatnosciComponent)
   },
   {
-    path: 'gallery',
+    path: 'zdjęcia',
     loadComponent: () => import('./pages/gallery/gallery.component').then(m => m.GalleryComponent)
   },
   { path: '**', redirectTo: '' }

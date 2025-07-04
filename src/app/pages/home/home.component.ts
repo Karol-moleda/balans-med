@@ -1,4 +1,4 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit, OnDestroy, AfterViewInit } from '@angular/core';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
@@ -11,7 +11,7 @@ import { CommonModule } from '@angular/common';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
 })
-export class HomeComponent implements OnInit, OnDestroy {
+export class HomeComponent implements OnInit, OnDestroy, AfterViewInit {
   slides = [
     {
       image:
@@ -22,17 +22,31 @@ export class HomeComponent implements OnInit, OnDestroy {
     },
     {
       image:
-        'img/8.jpg',
-      alt: 'Balans Med - Gabinet',
-      title: 'Kompleksowa opieka',
-      description: 'Najnowsze technologie i doświadczeni specjaliści w jednym miejscu',
+        'img/2.jpg',
+      alt: 'Balans Med - Specjaliści',
+      title: 'Doświadczeni specjaliści',
+      description: 'Nasz zespół to wysoko wykwalifikowani lekarze z wieloletnim doświadczeniem klinicznym',
     },
     {
       image:
-        'img/3.jpg',
-      alt: 'Balans Med - Zespół',
-      title: 'Zespół ekspertów',
-      description: 'Nasi lekarze to specjaliści z wieloletnim doświadczeniem',
+        'img/5.jpg',
+      alt: 'Balans Med - Opieka',
+      title: 'Profesjonalna opieka medyczna',
+      description: 'Indywidualne podejście do każdego pacjenta i kompleksowa diagnostyka',
+    },
+    {
+      image:
+        'img/7.jpg',
+      alt: 'Balans Med - Dostępność',
+      title: 'Miejsce dostosowane do osób z niepełnosprawnością',
+      description: 'Przestrzeń kliniki zaprojektowana z myślą o komforcie i dostępności dla wszystkich pacjentów',
+    },
+    {
+      image:
+        'img/9.jpg',
+      alt: 'Balans Med - Gabinety',
+      title: 'Nowoczesne, klimatyzowane gabinety',
+      description: 'Komfortowe warunki i przyjazna atmosfera podczas każdej wizyty',
     },
   ];
 
@@ -50,7 +64,7 @@ export class HomeComponent implements OnInit, OnDestroy {
     {
       icon: 'assessment',
       title: 'Wizyta diagnostyczna psychologiczna',
-      description: 'Profesjonalne badania psychologiczne: ocena osobowości, funkcji poznawczych, wydawanie opinii do celów prawnych.'
+      description: 'Wizyta diagnostyczna psychologiczna (badanie osobowości, badanie funkcji poznawczych/przesiewowe neuropsychologiczne/do stopnia niepełnosprawności/renty-wydanie opinii).'
     },
     {
       icon: 'support',
@@ -76,6 +90,10 @@ export class HomeComponent implements OnInit, OnDestroy {
     this.stopSlideShow();
   }
 
+  ngAfterViewInit() {
+    this.loadZnanyLekarzWidget();
+  }
+
   startSlideShow() {
     this.slideInterval = setInterval(() => {
       this.currentSlide = (this.currentSlide + 1) % this.slides.length;
@@ -92,5 +110,20 @@ export class HomeComponent implements OnInit, OnDestroy {
     this.stopSlideShow(); // Stop the automatic slideshow when user interacts
     this.currentSlide = index;
     this.startSlideShow(); // Restart the slideshow after user selection
+  }
+
+  loadZnanyLekarzWidget() {
+    // Use the exact script from the client
+    if (!document.getElementById('zl-widget-s')) {
+      const script = document.createElement('script');
+      script.id = 'zl-widget-s';
+      script.src = '//platform.docplanner.com/js/widget.js';
+      const fjs = document.getElementsByTagName('script')[0];
+      if (fjs && fjs.parentNode) {
+        fjs.parentNode.insertBefore(script, fjs);
+      } else {
+        document.body.appendChild(script);
+      }
+    }
   }
 }

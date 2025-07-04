@@ -374,6 +374,7 @@
 // Contact section
 .contact-section {
   padding: 2rem 0;
+  background-color: #f8f9fa;
   
   @media (min-width: 768px) {
     padding: 3rem 0;
@@ -384,11 +385,13 @@
   }
   
   .section-header {
-    text-align: center;
+    text-align: left;
     margin-bottom: 1.5rem;
+    padding-left: 1rem; // Add left padding to move header away from the left border
     
     @media (min-width: 768px) {
       margin-bottom: 2rem;
+      padding-left: 1.5rem; // Increase padding on larger screens
     }
     
     h2 {
@@ -408,189 +411,227 @@
       width: 80px;
       height: 3px;
       background-color: #1976d2; // Primary color
-      margin: 0 auto;
+      margin-left: 0; // Align underline with the header text
     }
   }
   
   .contact-container {
     display: flex;
-    gap: 1rem;
-    width: 100%;
-    box-sizing: border-box;
+    flex-direction: column;
+    gap: 2rem;
     
     @media (min-width: 768px) {
-      gap: 2rem;
-    }
-    
-    @media (min-width: 1024px) {
-      gap: 3rem;
-    }
-    
-    @media (max-width: 767px) {
-      flex-direction: column;
+      flex-direction: row;
+      align-items: stretch;
     }
     
     .contact-info {
       flex: 1;
-      min-width: 0;
-      box-sizing: border-box;
+      padding: 0 1rem;
       
       h3 {
-        font-size: 1.25rem;
+        font-size: 1.5rem;
         margin-bottom: 1rem;
-        word-wrap: break-word;
-        
-        @media (min-width: 768px) {
-          font-size: 1.5rem;
-        }
+        color: #1976d2;
       }
       
       p {
         display: flex;
         align-items: center;
-        margin-bottom: 0.5rem;
-        font-size: 0.9rem;
-        word-wrap: break-word;
-        
-        @media (min-width: 768px) {
-          font-size: 1rem;
-        }
+        margin-bottom: 0.75rem;
         
         mat-icon {
           margin-right: 0.5rem;
-          font-size: 1.2rem;
-          flex-shrink: 0;
+          color: #1976d2;
         }
       }
       
       h4 {
-        margin: 1rem 0 0.5rem;
-        font-size: 1rem;
-        
-        @media (min-width: 768px) {
-          font-size: 1.1rem;
-        }
+        font-size: 1.2rem;
+        margin: 1.5rem 0 0.5rem;
+        color: #333;
       }
-      
-      button {
-        margin-top: 1rem;
+
+      .location-info {
+        margin: 1.5rem 0;
+        padding: 1.25rem;
+        background-color: #f0f8ff;
+        border-left: 3px solid #1976d2;
+        border-radius: 4px;
+        
+        .location-bus {
+          display: flex;
+          align-items: flex-start;
+          margin-bottom: 1rem;
+          
+          mat-icon {
+            color: #1976d2;
+            margin-right: 0.75rem;
+            margin-top: 0.2rem;
+            flex-shrink: 0;
+          }
+          
+          p {
+            margin: 0;
+            line-height: 1.5;
+          }
+        }
+        
+        .location-help {
+          display: flex;
+          flex-wrap: wrap;
+          align-items: baseline;
+          
+          .help-content {
+            display: flex;
+            align-items: flex-start;
+            width: 100%;
+            margin-bottom: 0.25rem;
+            
+            .directions-help {
+              margin: 0;
+              font-style: italic;
+            }
+          }
+          
+          .help-phone {
+            margin-right: 0.3rem;
+            
+            a {
+              color: #1976d2;
+              text-decoration: none;
+              font-weight: 500;
+              
+              &:hover {
+                text-decoration: underline;
+              }
+            }
+          }
+          
+          .help-description {
+            p {
+              display: inline;
+              margin: 0;
+              font-style: italic;
+            }
+          }
+        }
       }
       
       .appointment-section {
-        margin-top: 2rem;
-        padding: 1rem;
-        background-color: #f8f9fa;
-        border-radius: 12px;
-        border-left: 4px solid #1976d2;
-        
-        @media (min-width: 768px) {
-          padding: 1.5rem;
-        }
-        
-        h4 {
-          color: #1976d2;
-          margin-bottom: 1rem;
-          font-size: 1rem;
-          
-          @media (min-width: 768px) {
-            font-size: 1.2rem;
-          }
-        }
+        margin-top: 1.5rem;
         
         .appointment-info {
-          margin-bottom: 1.5rem;
-          line-height: 1.6;
-          color: #666;
-          font-size: 0.9rem;
-          
-          @media (min-width: 768px) {
-            font-size: 1rem;
-          }
+          margin-bottom: 1rem;
         }
         
         .znany-lekarz-container {
-          display: flex;
-          justify-content: center;
           margin-top: 1rem;
+          padding: 0.5rem 0;
           
-          .znany-lekarz-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            background-color: #1976d2;
-            color: white;
+          .zl-facility-url {
+            color: #1976d2;
+            font-weight: 500;
             text-decoration: none;
-            padding: 10px 20px;
-            border-radius: 8px;
-            font-weight: 600;
-            font-size: 0.9rem;
+            font-size: 1.1rem;
+            padding: 0.75rem 1.25rem;
+            border: 1px solid #1976d2;
+            border-radius: 4px;
+            display: inline-block;
             transition: all 0.3s ease;
-            cursor: pointer;
-            box-shadow: 0 2px 8px rgba(25, 118, 210, 0.3);
             
-            @media (min-width: 768px) {
-              padding: 12px 24px;
-              font-size: 1rem;
+            &:hover {
+              background-color: #1976d2;
+              color: white;
+              box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            }
+          }
+        }
+      }
+      
+      .registration-info {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: baseline;
+        margin-bottom: 1rem;
+        padding: 0.5rem 0;
+        
+        .registration-label {
+          margin-right: 4px;
+          color: #333;
+          font-weight: normal;
+        }
+        
+        .registration-phone {
+          margin-right: 4px;
+          
+          a {
+            display: inline-flex;
+            align-items: baseline;
+            text-decoration: none;
+            
+            .phone-area {
+              color: #1976d2;  // Blue color
+              font-weight: 500;
+              padding: 0 4px;
+            }
+            
+            .phone-rest {
+              color: #ff5722;  // Orange-red color
+              font-weight: 500;
             }
             
             &:hover {
-              background-color: #1565c0;
-              transform: translateY(-2px);
-              box-shadow: 0 4px 12px rgba(25, 118, 210, 0.4);
-            }
-            
-            &:focus {
-              outline: 2px solid #1976d2;
-              outline-offset: 2px;
-            }
-            
-            .link-text {
-              font-size: 0.9rem;
-              
-              @media (min-width: 768px) {
-                font-size: 1rem;
-              }
-            }
-            
-            mat-icon {
-              font-size: 16px;
-              width: 16px;
-              height: 16px;
-              
-              @media (min-width: 768px) {
-                font-size: 18px;
-                width: 18px;
-                height: 18px;
+              .phone-area, .phone-rest {
+                text-decoration: underline;
               }
             }
           }
+        }
+        
+        .registration-hours {
+          color: #333;
         }
       }
     }
     
     .map-container {
-      flex: 2;
-      height: 300px;
-      border-radius: 8px;
-      overflow: hidden;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      min-width: 0;
-      box-sizing: border-box;
-      
-      @media (min-width: 768px) {
-        height: 400px;
-      }
-      
-      @media (min-width: 1024px) {
-        height: 450px;
-      }
+      flex: 1;
+      min-height: 300px;
       
       iframe {
-        width: 100%;
-        height: 100%;
-        border: none;
-        display: block;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
       }
     }
   }
 }
+
+// Registration line styles
+.registration-line {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 0.75rem;
+    line-height: 1.6;
+    
+    .registration-label {
+      margin-right: 3px;
+    }
+
+    .phone-number {
+      display: inline-flex;
+      align-items: center;
+      text-decoration: none;
+      font-weight: 500;
+      color: #1976d2;
+      
+      .number-part {
+        margin: 0 2px;
+      }
+      
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
