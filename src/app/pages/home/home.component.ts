@@ -1,4 +1,4 @@
-import { Component, OnInit, OnDestroy, AfterViewInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
@@ -11,7 +11,7 @@ import { CommonModule } from '@angular/common';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
 })
-export class HomeComponent implements OnInit, OnDestroy, AfterViewInit {
+export class HomeComponent implements OnInit, OnDestroy {
   slides = [
     {
       image:
@@ -90,10 +90,6 @@ export class HomeComponent implements OnInit, OnDestroy, AfterViewInit {
     this.stopSlideShow();
   }
 
-  ngAfterViewInit() {
-    this.loadZnanyLekarzWidget();
-  }
-
   startSlideShow() {
     this.slideInterval = setInterval(() => {
       this.currentSlide = (this.currentSlide + 1) % this.slides.length;
@@ -112,18 +108,4 @@ export class HomeComponent implements OnInit, OnDestroy, AfterViewInit {
     this.startSlideShow(); // Restart the slideshow after user selection
   }
 
-  loadZnanyLekarzWidget() {
-    // Use the exact script from the client
-    if (!document.getElementById('zl-widget-s')) {
-      const script = document.createElement('script');
-      script.id = 'zl-widget-s';
-      script.src = '//platform.docplanner.com/js/widget.js';
-      const fjs = document.getElementsByTagName('script')[0];
-      if (fjs && fjs.parentNode) {
-        fjs.parentNode.insertBefore(script, fjs);
-      } else {
-        document.body.appendChild(script);
-      }
-    }
-  }
 }
