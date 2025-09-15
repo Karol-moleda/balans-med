@@ -228,35 +228,80 @@ $box-shadow: 0 4px 20px rgba(42, 125, 140, 0.15);
   // Formatowanie tekstu HTML
   ::ng-deep {
     p {
-      margin-bottom: 1rem;
+      margin-bottom: 1.2rem;
+      text-align: justify;
+      line-height: 1.7;
       
       &:last-child {
         margin-bottom: 0;
+      }
+      
+      &:first-child {
+        margin-top: 0;
       }
     }
     
     strong {
       color: $primary-color;
       font-weight: 600;
+      font-size: 0.98rem;
     }
     
     br {
-      line-height: 2;
+      line-height: 1.5;
     }
     
     // Style dla list punktowanych
     ul {
-      margin: 1rem 0;
-      padding-left: 1.5rem;
+      margin: 1.5rem 0;
+      padding-left: 1.8rem;
+      background: rgba(42, 125, 140, 0.03);
+      border-left: 3px solid $primary-color;
+      border-radius: 0 8px 8px 0;
+      padding: 1rem 1rem 1rem 2rem;
       
       li {
-        margin-bottom: 0.5rem;
+        margin-bottom: 0.7rem;
         color: $text-color;
+        line-height: 1.6;
+        position: relative;
+        
+        &:last-child {
+          margin-bottom: 0;
+        }
         
         &::marker {
           color: $primary-color;
+          font-weight: bold;
         }
+        
+        // Niestandardowy marker dla lepszej kontroli
+        &::before {
+          content: "▸";
+          color: $primary-color;
+          font-weight: bold;
+          position: absolute;
+          left: -1.2rem;
+          top: 0;
+        }
+        
+        // Ukryj domyślny marker
+        list-style: none;
       }
+    }
+    
+    // Specjalne formatowanie dla sekcji z pogrubieniami
+    p:has(strong) {
+      margin-bottom: 0.8rem;
+    }
+    
+    // Dodatkowe odstępy dla czytelności
+    p + ul {
+      margin-top: -0.5rem;
+    }
+    
+    ul + p {
+      margin-top: 1.5rem;
     }
   }
 }

@@ -6,12 +6,7 @@
     <div class="doctors-grid">
       <div class="doctor-card" *ngFor="let doctor of doctors">
         <div class="doctor-image">
-          <!-- For Elżbieta Krawiec, we'll show a styled name -->
-          <div *ngIf="doctor.name.includes('ELŻBIETA KRAWIEC')" class="doctor-placeholder">
-            ELŻBIETA KRAWIEC
-          </div>
-          <!-- For other doctors, display image with fallback -->
-          <img *ngIf="!doctor.name.includes('ELŻBIETA KRAWIEC')" 
+          <img 
                [src]="doctor.image" 
                [alt]="doctor.name"
                loading="lazy"
