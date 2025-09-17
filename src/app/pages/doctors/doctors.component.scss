@@ -241,10 +241,11 @@ $box-shadow: 0 4px 20px rgba(42, 125, 140, 0.15);
       }
     }
     
+    // Usuń domyślne pogrubienie dla treści (klient nie chce pogrubienia)
     strong {
-      color: $primary-color;
-      font-weight: 600;
-      font-size: 0.98rem;
+      color: inherit;
+      font-weight: normal;
+      font-size: inherit;
     }
     
     br {

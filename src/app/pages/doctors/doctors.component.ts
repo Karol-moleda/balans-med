@@ -103,11 +103,6 @@ export class DoctorsComponent implements OnInit {
       
       .replace(/\.\s+([A-ZĄĆĘŁŃÓŚŹŻ])/g, '.</p><p>$1')
       
-      .replace(/(W czym mogę pomóc\?|Zakres świadczeń:|Zainteresowania prywatne:|Zakres usług:|Specjalizuję się w|Nie pracuję z)/gi, '<strong>$1</strong>')
-      
-      .replace(/(jestem\s+lekarzem|jestem\s+psychologiem|absolwentką|specjalistą|psychoterapeutką|interwentem\s+kryzysowym)/gi, '<strong>$1</strong>')
-      
-      .replace(/(Uniwersytetu?\s+[A-ZĄĆĘŁŃÓŚŹŻ][^.]+|Szpitalu?\s+[A-ZĄĆĘŁŃÓŚŹŻ][^.]+|Akademii?\s+[A-ZĄĆĘŁŃÓŚŹŻ][^.]+|Centrum\s+[A-ZĄĆĘŁŃÓŚŹŻ][^.]+|Towarzystwa?\s+[A-ZĄĆĘŁŃÓŚŹŻ][^.]+)/gi, '<strong>$1</strong>')
       
       .replace(/^(?!<[pu])/gm, '<p>')
       .replace(/(?<!>)$/gm, '</p>');
