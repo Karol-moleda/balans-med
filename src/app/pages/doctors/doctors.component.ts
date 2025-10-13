@@ -23,7 +23,7 @@ export class DoctorsComponent implements OnInit {
     {
       id: 1,
       name: 'lek. TATSIANA HUZAVA',
-      description: 'Jestem lekarzem specjalistą psychiatrii. Absolwentką Białoruskiego Państwowego Uniwersytetu Medycznego, po nostryfikacji dyplomu w Polsce w 2016 roku. Rezydenturę odbywałam w Szpitalu Klinicznym im dr Józefa Babińskiego w Krakowie, gdzie aktualnie kontynuuję pracę na Oddziale Psychogeriatrii. Stale poszerzam swoją wiedzę uczestnicząc w kursach oraz szkoleniach z zakresu psychiatrii dorosłych oraz wieku dziecięcego. W pracy z pacjentem staram się stworzyć atmosferę spokoju i zrozumienia, żeby jak najlepiej móc poznać jego problematykę, a następnie trafnie dobrać leczenie farmakologiczne i ewentualnie zasugerować najbardziej odpowiedni nurt psychoterapii. Zakres świadczeń: poradnictwo psychiatryczne dorosłych oraz dzieci i młodzieży od 14 roku życia. Zainteresowania prywatne: książki, sport, podróżowania Zakres usług: konsultacja psychiatryczna dorośli/ dzieci od 14 roku życia.',
+      description: 'Jestem lekarzem specjalistą psychiatrii. Absolwentką Białoruskiego Państwowego Uniwersytetu Medycznego, po nostryfikacji dyplomu w Polsce w 2016 roku. Rezydenturę odbywałam w Szpitalu Klinicznym im dr Józefa Babińskiego w Krakowie, gdzie aktualnie kontynuuję pracę na Oddziale Psychogeriatrii. Stale poszerzam swoją wiedzę uczestnicząc w kursach oraz szkoleniach z zakresu psychiatrii dorosłych oraz wieku dziecięcego. W pracy z pacjentem staram się stworzyć atmosferę spokoju i zrozumienia, żeby jak najlepiej móc poznać jego problematykę, a następnie trafnie dobrać leczenie farmakologiczne i ewentualnie zasugerować najbardziej odpowiedni nurt psychoterapii. Zakres świadczeń: poradnictwo psychiatryczne dorosłych oraz dzieci i młodzieży od 10 roku życia. Zainteresowania prywatne: książki, sport, podróżowania Zakres usług: konsultacja psychiatryczna dorośli/ dzieci od 10 roku życia.',
       image: 'img/Tatsiana.jpg'
     },
     {
@@ -52,7 +52,7 @@ export class DoctorsComponent implements OnInit {
     },
             {
       id: 6,
-      name: 'mgr. Dominika OLEŚ-KAŁUŻA',
+      name: 'mgr. DOMINIKA OLEŚ-KAŁUŻA',
       description: 'Jestem psychologiem-absolwentką Uniwersytetu Pedagogicznego w Krakowie. W trakcie całościowego szkolenia psychoterapeutycznego w Krakowskim Centrum Psychodynamicznym. Szkolenie jest rekomendowane przez Polskie Towarzystwo Psychologiczne oraz Polskie Towarzystwo Psychoterapii Psychodynamicznej.  Doświadczenie zdobywałam w Szpitalu im. dr. Józefa Babińskiego, w prywatnym gabinecie psychologicznym oraz w Ośrodku Pomocy Psychologicznej i Psychoterapeutycznej dla dzieci i młodzieży. Pracuję z młodzieżą (od 13 roku życia) i z osobami dorosłymi (również rodzicami dzieci w wieku szkolnym i przedszkolnym). Pomagam tym, którzy potrzebują wsparcia w odnalezieniu rozwiązań dla narastających trudności, jak i osobom, które mierzą się z różnymi trudnościami życiowymi: żałobą, stresem, kryzysami czy problemami w relacjach interpersonalnych. Najczęściej pracuję z osobami doświadczającymi zaburzeń nastroju, osobowości, stanów lękowych oraz depresji. Swoją pracę poddaję regularnej superwizji - indywidualnej i grupowej u certyfikowanego superwizora, rekomendowanego przez PTPPD. W pracy kieruję się kodeksem etyki psychoterapeuty Polskiego Towarzystwa Psychoterapii Psychodynamicznej. W pomaganiu szczególnie ważna jest dla mnie empatia oraz otwarcie na zrozumienie problemów drugiej osoby',
       image: 'img/Dominika.jpg'
     },
@@ -61,6 +61,12 @@ export class DoctorsComponent implements OnInit {
       name: 'lek. ZUZANNA STERNA',
       description: 'Jestem lekarzem, absolwentką Uniwersytetu Medycznego w Łodzi. Obecnie odbywam specjalizację z psychiatrii w Szpitalu Klinicznym im. dr. Józefa Babińskiego w Krakowie. Stale poszerzam swoją wiedzę i umiejętności, uczestnicząc w kursach, konferencjach oraz śledząc najnowsze piśmiennictwo z zakresu psychiatrii. Oferuję konsultacje psychiatryczne dla osób dorosłych. W pracy z pacjentem szczególnie zależy mi na stworzeniu bezpiecznej i pełnej zaufania przestrzeni, opartej na szacunku i zrozumieniu. Dzięki temu możliwe jest trafne dobranie indywidualnego planu leczenia farmakologicznego, a w razie potrzeby – również wskazanie odpowiedniego nurtu psychoterapii.',
       image: 'img/zuzia.jpeg'
+    },
+    {
+      id: 8,
+      name: 'mgr. Milena Langkammer',
+      description: 'Jestem psychologiem i psychoterapeutką w trakcie całościowego szkolenia w nurcie psychodynamicznym w Krakowskim Centrum Psychodynamicznym (KCP). Ukończyłam psychologię na Uniwersytecie Pedagogicznym w Krakowie. Doświadczenie zawodowe zdobywałam, pracując w liceum i przedszkolu, gdzie prowadziłam konsultacje dla dzieci, młodzieży i rodziców. W pracy stawiam na spokojną rozmowę, uważność i małe kroki. Pierwsze spotkanie to poznanie sytuacji i wspólne ustalenie celów. Ważne są dla mnie jasność, konsekwencja i dostosowanie tempa do możliwości klienta. Z dorosłymi pracuję m.in. nad stresem, przeciążeniem, lękiem, obniżonym nastrojem, trudnościami w relacjach i zmianami życiowymi. Z dziećmi i młodzieżą zajmuję się regulacją emocji, zachowaniami, relacjami rówieśniczymi oraz rozwojem komunikacji. Pracuję z dziećmi od 3. roku życia. </br> Pomagam m.in. w: ● napadach złości, lęku i trudnościach z koncentracją, ● adaptacji w grupie i relacjach z rówieśnikami, ● opóźnieniach mowy i mutyzmie wybiórczym, ● trudnościach neurorozwojowych (ADHD, spektrum autyzmu). W obszarze spektrum autyzmu wykonuję przesiew i wstępną ocenę funkcjonowania. Pomagam w planowaniu małych, realnych kroków — wspierających komunikację, przewidywalność dnia i samoregulację. W czym mogę pomóc: ● Regulacja emocji i zachowań ● Trudności w relacjach i adaptacji ● Wsparcie komunikacji i rozwoju mowy ● ADHD i spektrum autyzmu ● Nawyki dnia codziennego (sen, jedzenie, trening czystości) ● Higiena cyfrowa',
+      image: 'img/Milena.jpg'
     }
   ];
 

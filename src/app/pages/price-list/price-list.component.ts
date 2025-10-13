@@ -27,13 +27,28 @@ export class PriceListComponent {
         { 
           service: 'Konsultacja psychiatryczna pierwszorazowa', 
           price: '350-400 zł', 
-          description: '40 min (dorośli/młodzież)' 
+          description: '40 min (dorośli)' 
         },
         { 
           service: 'Konsultacja psychiatryczna kontrolna', 
-          price: '250-300 zł', 
-          description: '20 min (dorośli/młodzież)' 
-        }
+          price: '280-320 zł', 
+          description: '20 min (dorośli)' 
+        },
+        { 
+          service: 'Konsultacja psychiatryczna pierwszorazowa', 
+          price: '450 zł', 
+          description: '60 min (dzieci)' 
+        },
+        { 
+          service: 'Konsultacja psychiatryczna kolejna wizyta', 
+          price: '380 zł', 
+          description: '30 min (dzieci)' 
+        },
+        { 
+          service: 'Wizyta recepturowa', 
+          price: '100 zł', 
+          description: '(stacjonarnie lub teleporada 10min)' 
+        },
       ]
     },
     {
