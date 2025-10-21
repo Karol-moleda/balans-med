@@ -3,11 +3,12 @@ import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { CommonModule } from '@angular/common';
+import { PromotionBannerComponent } from '../../components/promotion-banner/promotion-banner.component';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [MatCardModule, MatButtonModule, MatIconModule, CommonModule],
+  imports: [MatCardModule, MatButtonModule, MatIconModule, CommonModule, PromotionBannerComponent],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
 })

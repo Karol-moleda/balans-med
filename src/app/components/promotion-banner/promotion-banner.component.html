@@ -1,0 +1,62 @@
+<div class="promotion-banner" *ngIf="promotion" [ngClass]="getThemeClass()">
+  <div class="promo-background">
+    <div class="animated-elements" *ngIf="promotion.theme === 'autumn'">
+      <span class="element">🍁</span>
+      <span class="element">🍂</span>
+      <span class="element">🍁</span>
+      <span class="element">🍂</span>
+      <span class="element">🍁</span>
+    </div>
+  </div>
+  
+  <div class="promo-content">
+    <div class="promo-header">
+      <span class="promo-badge">{{ promotion.badge }}</span>
+      <h2 class="promo-title">{{ promotion.title }}</h2>
+      <p class="promo-subtitle">{{ promotion.subtitle }}</p>
+    </div>
+
+    <div class="promo-main">
+      <div class="discount-box">
+        <span class="discount-number">{{ promotion.discount }}</span>
+        <span class="discount-text">{{ promotion.discountText }}</span>
+      </div>
+      <div class="offer-details">
+        <h3>{{ promotion.mainOffer }}</h3>
+        <p>{{ promotion.offerSubtext }}</p>
+      </div>
+    </div>
+
+    <div class="promo-description" [innerHTML]="promotion.description"></div>
+
+    <div class="specialists" *ngIf="promotion.specialists && promotion.specialists.length > 0">
+      <div class="specialists-list">
+        <span *ngFor="let specialist of promotion.specialists; let last = last">
+          <span class="specialist-name">{{ specialist }}</span>
+          <span class="separator" *ngIf="!last">•</span>
+        </span>
+      </div>
+      <p class="specialists-desc" *ngIf="promotion.specialistsDesc">{{ promotion.specialistsDesc }}</p>
+    </div>
+
+    <div class="promo-footer">
+      <div class="deadline">
+        <mat-icon>schedule</mat-icon>
+        <span>Promocja trwa do <strong>{{ promotion.endDate }}</strong></span>
+      </div>
+      
+      <div class="cta-buttons">
+        <a [href]="'tel:' + promotion.phoneNumber" class="cta-btn primary">
+          <mat-icon>phone</mat-icon>
+          <span>Zadzwoń</span>
+        </a>
+        <a [href]="promotion.onlineBookingUrl" target="_blank" rel="noopener noreferrer" class="cta-btn secondary">
+          <mat-icon>event</mat-icon>
+          <span>Umów online</span>
+        </a>
+      </div>
+      
+      <p class="cta-message">{{ promotion.ctaMessage }}</p>
+    </div>
+  </div>
+</div>

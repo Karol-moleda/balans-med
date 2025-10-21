@@ -1,4 +1,7 @@
 <div class="home-container">
+  <!-- Promotion Banner - First Thing Visible -->
+  <app-promotion-banner></app-promotion-banner>
+
   <section class="hero-section">
     <div class="image-slider">
       <div class="slide" *ngFor="let slide of slides; let i = index" [class.active]="currentSlide === i">
