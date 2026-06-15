@@ -1,10 +1,11 @@
 <div class="home-container">
-  <!-- Promotion Banner - First Thing Visible -->
-  <app-promotion-banner></app-promotion-banner>
-
   <section class="hero-section">
     <div class="image-slider">
-      <div class="slide" *ngFor="let slide of slides; let i = index" [class.active]="currentSlide === i">
+      <div
+        class="slide"
+        *ngFor="let slide of slides; let i = index"
+        [class.active]="currentSlide === i"
+      >
         <img [src]="slide.image" [alt]="slide.alt" />
         <div class="slide-content">
           <h1>{{ slide.title }}</h1>
@@ -12,9 +13,16 @@
         </div>
       </div>
       <div class="slider-indicators">
-        <span *ngFor="let slide of slides; let i = index" [class.active]="currentSlide === i" tabindex="0"
-          (click)="setCurrentSlide(i)" (keydown.enter)="setCurrentSlide(i)" (keydown.space)="setCurrentSlide(i)"
-          role="button" [attr.aria-label]="'Go to slide ' + (i + 1)"></span>
+        <span
+          *ngFor="let slide of slides; let i = index"
+          [class.active]="currentSlide === i"
+          tabindex="0"
+          (click)="setCurrentSlide(i)"
+          (keydown.enter)="setCurrentSlide(i)"
+          (keydown.space)="setCurrentSlide(i)"
+          role="button"
+          [attr.aria-label]="'Go to slide ' + (i + 1)"
+        ></span>
       </div>
     </div>
   </section>
@@ -27,31 +35,32 @@
     <div class="about-content">
       <div class="about-text">
         <p class="lead">
-          <strong>BALANS MED</strong> to nowe, wyjątkowe miejsce na mapie Krakowa, stworzone z myślą o tych.
-          Którzy poszukują wewnętrznej równowagi i wsparcia w trudnych momentach życia.
+          <strong>BALANS MED</strong> to nowe, wyjątkowe miejsce na mapie
+          Krakowa, stworzone z myślą o tych. Którzy poszukują wewnętrznej
+          równowagi i wsparcia w trudnych momentach życia.
         </p>
         <p>
-          Wiemy jak ważna jest równowaga psychiczna, którą tak trudno osiągnąć we współczesnym
-          świecie- pełnym stresu, burzliwych emocji i pogoni za doskonałością… dlatego też
-          stworzyliśmy dla Państwa wyjątkowy, kameralny gabinet psychiatryczno-
-          psychoterapeutyczny.
+          Wiemy jak ważna jest równowaga psychiczna, którą tak trudno osiągnąć
+          we współczesnym świecie- pełnym stresu, burzliwych emocji i pogoni za
+          doskonałością… dlatego też stworzyliśmy dla Państwa wyjątkowy,
+          kameralny gabinet psychiatryczno- psychoterapeutyczny.
         </p>
         <p>
-          Doskonale rozumiemy, jak trudno dziś zachować spokój i harmonię- w świecie pełnym
-          stresu, presji i nieustannego dążenia do perfekcji. Dlatego powstał nasz kameralny gabinet
-          psychiatryczno-terapeutyczny, w którym oferujemy profesjonalną pomoc w atmosferze
-          zrozumienia i dyskrecji.
+          Doskonale rozumiemy, jak trudno dziś zachować spokój i harmonię- w
+          świecie pełnym stresu, presji i nieustannego dążenia do perfekcji.
+          Dlatego powstał nasz kameralny gabinet psychiatryczno-terapeutyczny, w
+          którym oferujemy profesjonalną pomoc w atmosferze zrozumienia i
+          dyskrecji.
         </p>
         <p>
-          Nasza misją jest przywracanie równowagi psychicznej osobom w różnorodnych sytuacjach
-          kryzysowych. Obejmujemy opieką zarówno dorosłych, jak i dzieci, dostosowując wsparcie
-          do indywidualnych potrzeb każdego pacjenta.
+          Nasza misją jest przywracanie równowagi psychicznej osobom w
+          różnorodnych sytuacjach kryzysowych. Obejmujemy opieką zarówno
+          dorosłych, jak i dzieci, dostosowując wsparcie do indywidualnych
+          potrzeb każdego pacjenta.
         </p>
       </div>
       <div class="about-image">
-        <img
-          src="img/2.jpg"
-          alt="Klinika Balans Med" />
+        <img src="img/2.jpg" alt="Klinika Balans Med" />
       </div>
     </div>
   </section>
@@ -82,19 +91,25 @@
     <div class="contact-container">
       <div class="contact-info">
         <h3>Balans Med</h3>
-        <p><mat-icon>location_on</mat-icon> ul.Przemiarki 23/10 30-348 Kraków</p>
+        <p>
+          <mat-icon>location_on</mat-icon> ul.Przemiarki 23/10 30-348 Kraków
+        </p>
         <p><mat-icon>email</mat-icon> balansmed.rejestracja&#64;gmail.com</p>
-        
+
         <div class="location-info">
           <div class="location-bus">
             <mat-icon>directions_bus</mat-icon>
-            <p>Gabinet znajduje się około 5 minut pieszo od przystanków komunikacji miejskiej: „Kampus UJ" oraz „Kampus UP"</p>
+            <p>
+              Gabinet znajduje się około 5 minut pieszo od przystanków
+              komunikacji miejskiej: „Kampus UJ" oraz „Kampus UP"
+            </p>
           </div>
-          
+
           <div class="location-help">
             <div class="help-content">
               <p class="directions-help">
-                Jeśli zlokalizowanie gabinetu sprawi Państwu trudność, zapraszamy do kontaktu telefonicznego
+                Jeśli zlokalizowanie gabinetu sprawi Państwu trudność,
+                zapraszamy do kontaktu telefonicznego
               </p>
             </div>
             <div class="help-phone">
@@ -105,7 +120,7 @@
             </div>
           </div>
         </div>
-        
+
         <h4>Godziny otwarcia:</h4>
         <p>Zapraszamy Państwa od poniedziałku do piątku w godzinach 15-20</p>
         <div class="registration-info">
@@ -115,17 +130,29 @@
               <span class="phone-area">(889 412 421)</span>
             </a>
           </div>
-          <div class="registration-hours">możliwa jest od poniedziałku do piątku w godzinach 10-20</div>
+          <div class="registration-hours">
+            możliwa jest od poniedziałku do piątku w godzinach 10-20
+          </div>
         </div>
-        
+
         <div class="appointment-section">
           <h4>Umów wizytę</h4>
           <p class="appointment-info">
-            Wizyty u naszych specjalistów można umówić również za pomocą portalu znany lekarz:
+            Wizyty u naszych specjalistów można umówić również za pomocą portalu
+            znany lekarz:
           </p>
           <div class="znany-lekarz-container">
-            <a class="zl-button" href="https://www.znanylekarz.pl/placowki/balans-med" target="_blank" rel="noopener noreferrer">
-              <img src="https://www.znanylekarz.pl/favicon.ico" alt="Znany Lekarz" class="zl-icon">
+            <a
+              class="zl-button"
+              href="https://www.znanylekarz.pl/placowki/balans-med"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src="https://www.znanylekarz.pl/favicon.ico"
+                alt="Znany Lekarz"
+                class="zl-icon"
+              />
               <span>Umów wizytę w Balans-Med</span>
             </a>
           </div>
@@ -135,7 +162,12 @@
         <div>
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2561.1854!2d19.9373!3d50.0619!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47165b0f0d0f0f0f%3A0x0!2sUl.%20Przemiarki%2023%2F10%2C%2030-348%20Krak%C3%B3w!5e0!3m2!1spl!2spl!4v1631890000000!5m2!1spl!2spl"
-            width="100%" height="450" style="border: 0" allowfullscreen="" loading="lazy">
+            width="100%"
+            height="450"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+          >
           </iframe>
         </div>
       </div>

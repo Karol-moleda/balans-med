@@ -41,6 +41,10 @@ ng build
 
 This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
 
+## Deployment on Apache hosting
+
+Projekt zawiera plik `public/.htaccess`, który po buildzie trafia do katalogu wynikowego i włącza fallback dla Angular Router. Dzięki temu odświeżanie adresów takich jak `/zespół` lub `/kontakt` nie zwraca błędu 404 na zwykłym hostingu Apache.
+
 ## Running unit tests
 
 To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
